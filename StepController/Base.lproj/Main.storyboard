@@ -1,32 +1,94 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LBu-tR-Iqq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="clB-vc-fyl">
+        <!--Step View Controller-->
+        <scene sceneID="Iny-hd-M10">
             <objects>
-                <viewController id="703-4V-yAM" customClass="RootViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LBu-tR-Iqq" customClass="StepViewController" customModule="StepController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I7W-xW-C47"/>
-                        <viewControllerLayoutGuide type="bottom" id="IfR-02-kHw"/>
+                        <viewControllerLayoutGuide type="top" id="EbF-WS-wQQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vl2-zi-r8X"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="502-Ir-ELC">
+                    <view key="view" contentMode="scaleToFill" id="e4v-1b-Pe4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AMh-xN-ZzJ">
+                                <rect key="frame" x="16" y="623" width="343" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-0s-PtP">
+                                        <rect key="frame" x="0.0" y="7" width="30" height="30"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="prevAction:" destination="LBu-tR-Iqq" eventType="touchUpInside" id="rB7-Tc-LDg"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-fV-4io">
+                                        <rect key="frame" x="152" y="3.5" width="39" height="37"/>
+                                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHZ-sY-eFZ">
+                                        <rect key="frame" x="313" y="7" width="30" height="30"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="nextAction:" destination="LBu-tR-Iqq" eventType="touchUpInside" id="tVw-eH-EDi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="XfP-NR-nbH"/>
+                                </constraints>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoB-9i-aRN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="PSa-q0-pDM" kind="embed" id="lvY-UU-1iP"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AMh-xN-ZzJ" secondAttribute="trailing" id="7aD-o7-ZEk"/>
+                            <constraint firstItem="AMh-xN-ZzJ" firstAttribute="top" secondItem="MoB-9i-aRN" secondAttribute="bottom" id="Azh-54-sPe"/>
+                            <constraint firstItem="AMh-xN-ZzJ" firstAttribute="leading" secondItem="e4v-1b-Pe4" secondAttribute="leadingMargin" id="RzD-M5-hAG"/>
+                            <constraint firstItem="MoB-9i-aRN" firstAttribute="leading" secondItem="e4v-1b-Pe4" secondAttribute="leading" id="XCD-b6-tbt"/>
+                            <constraint firstAttribute="trailing" secondItem="MoB-9i-aRN" secondAttribute="trailing" id="Y2Y-Mb-FxL"/>
+                            <constraint firstItem="Vl2-zi-r8X" firstAttribute="top" secondItem="AMh-xN-ZzJ" secondAttribute="bottom" id="iN1-89-A7x"/>
+                            <constraint firstItem="MoB-9i-aRN" firstAttribute="top" secondItem="EbF-WS-wQQ" secondAttribute="bottom" id="mh6-M6-GOK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="MoB-9i-aRN" id="IMN-xb-W79"/>
+                        <outlet property="nextButton" destination="CHZ-sY-eFZ" id="xu8-fM-Yiv"/>
+                        <outlet property="pageDots" destination="4tf-fV-4io" id="04v-J3-W5v"/>
+                        <outlet property="prevButton" destination="tKw-0s-PtP" id="WnI-Kl-rMC"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-pU-vEd" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dd5-7u-9Ky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-101" y="-243"/>
+            <point key="canvasLocation" x="-951" y="-243"/>
+        </scene>
+        <!--Step Page View Controller-->
+        <scene sceneID="qq6-e6-oQO">
+            <objects>
+                <pageViewController storyboardIdentifier="stepPageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="PSa-q0-pDM" customClass="StepPageViewController" customModule="StepController" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XTy-9W-hdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-150" y="-243"/>
         </scene>
         <!--Data View Controller-->
         <scene sceneID="snT-py-3hH">
             <objects>
-                <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dataViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S4R-Ja-viH" customClass="DataViewController" customModule="StepController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fXf-Jd-eTc"/>
                         <viewControllerLayoutGuide type="bottom" id="EPS-s9-h4K"/>
@@ -36,11 +98,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF2-Le-7mQ">
+                                <rect key="frame" x="20" y="20" width="335" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
+                                <rect key="frame" x="20" y="44.5" width="335" height="602.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>

@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D62064AB1EA51FF000761461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064AA1EA51FF000761461 /* AppDelegate.swift */; };
-		D62064AD1EA51FF000761461 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064AC1EA51FF000761461 /* RootViewController.swift */; };
 		D62064AF1EA51FF000761461 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064AE1EA51FF000761461 /* DataViewController.swift */; };
-		D62064B11EA51FF000761461 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064B01EA51FF000761461 /* ModelController.swift */; };
 		D62064B41EA51FF000761461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B21EA51FF000761461 /* Main.storyboard */; };
 		D62064B61EA51FF000761461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62064B51EA51FF000761461 /* Assets.xcassets */; };
 		D62064B91EA51FF000761461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B71EA51FF000761461 /* LaunchScreen.storyboard */; };
+		D62064C11EA5257700761461 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064C01EA5257700761461 /* StepViewController.swift */; };
+		D62064C31EA52A5000761461 /* StepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064C21EA52A5000761461 /* StepPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D62064A71EA51FF000761461 /* StepController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62064AA1EA51FF000761461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D62064AC1EA51FF000761461 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D62064AE1EA51FF000761461 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		D62064B01EA51FF000761461 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		D62064B31EA51FF000761461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D62064B51EA51FF000761461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D62064B81EA51FF000761461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62064BA1EA51FF000761461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62064C01EA5257700761461 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
+		D62064C21EA52A5000761461 /* StepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				D62064AA1EA51FF000761461 /* AppDelegate.swift */,
-				D62064AC1EA51FF000761461 /* RootViewController.swift */,
 				D62064AE1EA51FF000761461 /* DataViewController.swift */,
-				D62064B01EA51FF000761461 /* ModelController.swift */,
 				D62064B21EA51FF000761461 /* Main.storyboard */,
 				D62064B51EA51FF000761461 /* Assets.xcassets */,
 				D62064B71EA51FF000761461 /* LaunchScreen.storyboard */,
 				D62064BA1EA51FF000761461 /* Info.plist */,
+				D62064C01EA5257700761461 /* StepViewController.swift */,
+				D62064C21EA52A5000761461 /* StepPageViewController.swift */,
 			);
 			path = StepController;
 			sourceTree = "<group>";
@@ -143,8 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62064AD1EA51FF000761461 /* RootViewController.swift in Sources */,
-				D62064B11EA51FF000761461 /* ModelController.swift in Sources */,
+				D62064C11EA5257700761461 /* StepViewController.swift in Sources */,
+				D62064C31EA52A5000761461 /* StepPageViewController.swift in Sources */,
 				D62064AF1EA51FF000761461 /* DataViewController.swift in Sources */,
 				D62064AB1EA51FF000761461 /* AppDelegate.swift in Sources */,
 			);
