@@ -17,8 +17,10 @@ class SampleViewController: SimpleWizzardViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var childViews = [StepViewController]()
         
-        for _ in 0...8 {
-            childViews.append(storyboard.instantiateViewController(withIdentifier: "dataViewController") as! SampleStepViewController)
+        for i in 0...2 {
+            let newView = storyboard.instantiateViewController(withIdentifier: "dataViewController") as! SampleStepViewController
+            newView.number = i + 1
+            childViews.append(newView)
         }
         
         self.generate(childViews)

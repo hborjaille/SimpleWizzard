@@ -49,18 +49,21 @@ class SimpleWizzardViewController: UIViewController, StepPageViewControllerDeleg
         stackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stackView)
         
-        self.pageViewController!.view.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.pageViewController!.view)
-        
         let stackView_H = NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[stackView]-8-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["stackView": stackView])
         let stackView_V = NSLayoutConstraint.constraints(withVisualFormat: "V:[stackView(44)]-0-|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["stackView": stackView])
         self.view.addConstraints(stackView_H)
         self.view.addConstraints(stackView_V)
         
+        self.pageViewController!.view.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.pageViewController!.view)
+        
         let pageView_H = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["pageView": self.pageViewController!.view])
-        let pageView_V = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]-44-|", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["pageView": self.pageViewController!.view])
+        let pageView_V = NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]", options: NSLayoutFormatOptions(rawValue:0), metrics: nil, views: ["pageView": self.pageViewController!.view, "stackView": stackView])
         self.view.addConstraints(pageView_H)
         self.view.addConstraints(pageView_V)
+        
+        let bottomConst = pageViewController?.view.bottomAnchor.constraint(equalTo: stackView.topAnchor)
+        self.view.addConstraint(bottomConst!)
     }
 
     override func viewDidLoad() {
