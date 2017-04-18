@@ -28,26 +28,21 @@ protocol StepPageViewControllerDelegate: class {
     
 }
 
-class StepPageViewController: UIPageViewController, UIPageViewControllerDelegate, MovePageDelegate {
+class StepPageViewController: UIPageViewController, MoveStepDelegate {
     
     weak var stepDelegate: StepPageViewControllerDelegate?
     var currentIndex = 0
     
-    var orderedViewControllers: [UIViewController]?
+    var orderedViewControllers: [StepViewController]?
     
-    var currentViewController:UIViewController?
+    var currentViewController: StepViewController?
+    
+    convenience init() {
+        self.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        delegate = self
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.orderedViewControllers = []
-        
-        for _ in 0...8 {
-            self.orderedViewControllers?.append(storyboard.instantiateViewController(withIdentifier: "dataViewController") as! DataViewController)
-        }
         
         if let firstViewController = orderedViewControllers?.first {
             setViewControllers([firstViewController],
@@ -58,65 +53,62 @@ class StepPageViewController: UIPageViewController, UIPageViewControllerDelegate
             self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageCount: orderedViewControllers!.count)
             currentViewController = orderedViewControllers?.first
         }
-        
-        
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        if let firstViewController = viewControllers?.first,
-            let index = orderedViewControllers?.index(of: firstViewController) {
-            self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: index)
-        }
-    }
-    
-    func next() {
+    func verifyNext() {
+        if currentViewController?.delegate != nil && currentViewController!.delegate!.verifyNext() {
         
-        guard let viewControllerIndex = orderedViewControllers?.index(of: currentViewController!) else {
-            return
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        if let orderedViewControllersCount = orderedViewControllers?.count {
+            guard let viewControllerIndex = orderedViewControllers?.index(of: currentViewController!) else {
+                return
+            }
+            
+            let nextIndex = viewControllerIndex + 1
+            guard let orderedViewControllersCount = orderedViewControllers?.count else {
+                return
+            }
+            
             guard orderedViewControllersCount != nextIndex else {
-                currentViewController = orderedViewControllers?.first
-                self.setViewControllers([currentViewController!], direction: .forward, animated: true, completion: nil)
-                self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: 0)
                 return
             }
             
             guard orderedViewControllersCount > nextIndex else {
                 return
             }
-        }
         
-        currentViewController = orderedViewControllers?[nextIndex]
-        self.setViewControllers([currentViewController!], direction: .forward, animated: true, completion: nil)
-        self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: nextIndex)
-    }
-    
-    func prev() {
-        
-        guard let viewControllerIndex = orderedViewControllers?.index(of: currentViewController!) else {
-            return
-        }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        guard previousIndex >= 0 else {
-            currentViewController = orderedViewControllers?.last
-            self.setViewControllers([currentViewController!], direction: .reverse, animated: true, completion: nil)
-            self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: orderedViewControllers!.count - 1)
-            return
-        }
-        
-        if let viewControllers = orderedViewControllers {
-            guard viewControllers.count > previousIndex else {
-                return
+            currentViewController = orderedViewControllers?[nextIndex]
+            self.setViewControllers([currentViewController!], direction: .forward, animated: true, completion: nil)
+            self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: nextIndex)
+            
+            if orderedViewControllersCount - 1 == nextIndex {
+                currentViewController?.nextButton?.setImage(UIImage(named: "done"), for: .normal)
             }
         }
+    }
+    
+    func verifyPrev() {
+        if currentViewController?.delegate != nil && currentViewController!.delegate!.verifyPrev() {
         
-        currentViewController = orderedViewControllers?[previousIndex]
-        self.setViewControllers([currentViewController!], direction: .reverse, animated: true, completion: nil)
-        self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: previousIndex)
+            guard let viewControllerIndex = orderedViewControllers?.index(of: currentViewController!) else {
+                return
+            }
+            
+            let previousIndex = viewControllerIndex - 1
+            
+            guard previousIndex >= 0 else {
+                return
+            }
+            
+            if let viewControllers = orderedViewControllers {
+                guard viewControllers.count > previousIndex else {
+                    return
+                }
+            }
+        
+            currentViewController = orderedViewControllers?[previousIndex]
+            self.setViewControllers([currentViewController!], direction: .reverse, animated: true, completion: nil)
+            self.stepDelegate?.stepPageViewController(viewController: self, didUpdatePageIndex: previousIndex)
+            
+            currentViewController?.nextButton?.setImage(UIImage(named: "right"), for: .normal)
+        }
     }
 }
