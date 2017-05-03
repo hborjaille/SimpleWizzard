@@ -11,12 +11,14 @@
 		D62064B41EA51FF000761461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B21EA51FF000761461 /* Main.storyboard */; };
 		D62064B61EA51FF000761461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62064B51EA51FF000761461 /* Assets.xcassets */; };
 		D62064B91EA51FF000761461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B71EA51FF000761461 /* LaunchScreen.storyboard */; };
-		D62064C11EA5257700761461 /* SimpleWizzardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064C01EA5257700761461 /* SimpleWizzardViewController.swift */; };
-		D62064C31EA52A5000761461 /* StepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62064C21EA52A5000761461 /* StepPageViewController.swift */; };
-		D698DFE21EA644D0004B53D4 /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698DFE11EA644D0004B53D4 /* StepViewController.swift */; };
-		D698DFE61EA6961A004B53D4 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698DFE51EA6961A004B53D4 /* SampleViewController.swift */; };
-		D698DFE81EA69719004B53D4 /* SampleStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698DFE71EA69719004B53D4 /* SampleStepViewController.swift */; };
-		D698DFEA1EA6A82B004B53D4 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698DFE91EA6A82B004B53D4 /* DoneViewController.swift */; };
+		D6A6692A1EB9FA8000DD1EFB /* SimpleWizzardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669251EB9FA8000DD1EFB /* SimpleWizzardViewController.swift */; };
+		D6A6692B1EB9FA8000DD1EFB /* StepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669261EB9FA8000DD1EFB /* StepPageViewController.swift */; };
+		D6A6692C1EB9FA8000DD1EFB /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669271EB9FA8000DD1EFB /* StepViewController.swift */; };
+		D6A6692D1EB9FA8000DD1EFB /* StepTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669281EB9FA8000DD1EFB /* StepTableViewController.swift */; };
+		D6A6692E1EB9FA8000DD1EFB /* StepCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669291EB9FA8000DD1EFB /* StepCollectionViewController.swift */; };
+		D6A669301EB9FAC400DD1EFB /* TextFieldMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A6692F1EB9FAC400DD1EFB /* TextFieldMask.swift */; };
+		D6A669321EB9FAC800DD1EFB /* KeyboardDismissController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669311EB9FAC800DD1EFB /* KeyboardDismissController.swift */; };
+		D6A669341EB9FACC00DD1EFB /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669331EB9FACC00DD1EFB /* EmptyState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +28,14 @@
 		D62064B51EA51FF000761461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D62064B81EA51FF000761461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62064BA1EA51FF000761461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D62064C01EA5257700761461 /* SimpleWizzardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWizzardViewController.swift; sourceTree = "<group>"; };
-		D62064C21EA52A5000761461 /* StepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPageViewController.swift; sourceTree = "<group>"; };
-		D698DFE11EA644D0004B53D4 /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
-		D698DFE51EA6961A004B53D4 /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		D698DFE71EA69719004B53D4 /* SampleStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleStepViewController.swift; sourceTree = "<group>"; };
-		D698DFE91EA6A82B004B53D4 /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		D6A669251EB9FA8000DD1EFB /* SimpleWizzardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWizzardViewController.swift; sourceTree = "<group>"; };
+		D6A669261EB9FA8000DD1EFB /* StepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPageViewController.swift; sourceTree = "<group>"; };
+		D6A669271EB9FA8000DD1EFB /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
+		D6A669281EB9FA8000DD1EFB /* StepTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewController.swift; sourceTree = "<group>"; };
+		D6A669291EB9FA8000DD1EFB /* StepCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCollectionViewController.swift; sourceTree = "<group>"; };
+		D6A6692F1EB9FAC400DD1EFB /* TextFieldMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMask.swift; sourceTree = "<group>"; };
+		D6A669311EB9FAC800DD1EFB /* KeyboardDismissController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDismissController.swift; sourceTree = "<group>"; };
+		D6A669331EB9FACC00DD1EFB /* EmptyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +70,17 @@
 			children = (
 				D62064AA1EA51FF000761461 /* AppDelegate.swift */,
 				D62064B21EA51FF000761461 /* Main.storyboard */,
-				D698DFE91EA6A82B004B53D4 /* DoneViewController.swift */,
 				D62064B51EA51FF000761461 /* Assets.xcassets */,
 				D62064B71EA51FF000761461 /* LaunchScreen.storyboard */,
 				D62064BA1EA51FF000761461 /* Info.plist */,
-				D698DFE51EA6961A004B53D4 /* SampleViewController.swift */,
-				D698DFE71EA69719004B53D4 /* SampleStepViewController.swift */,
-				D698DFE11EA644D0004B53D4 /* StepViewController.swift */,
-				D62064C01EA5257700761461 /* SimpleWizzardViewController.swift */,
-				D62064C21EA52A5000761461 /* StepPageViewController.swift */,
+				D6A669251EB9FA8000DD1EFB /* SimpleWizzardViewController.swift */,
+				D6A669261EB9FA8000DD1EFB /* StepPageViewController.swift */,
+				D6A669271EB9FA8000DD1EFB /* StepViewController.swift */,
+				D6A669281EB9FA8000DD1EFB /* StepTableViewController.swift */,
+				D6A669291EB9FA8000DD1EFB /* StepCollectionViewController.swift */,
+				D6A6692F1EB9FAC400DD1EFB /* TextFieldMask.swift */,
+				D6A669311EB9FAC800DD1EFB /* KeyboardDismissController.swift */,
+				D6A669331EB9FACC00DD1EFB /* EmptyState.swift */,
 			);
 			path = StepController;
 			sourceTree = "<group>";
@@ -152,12 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D698DFEA1EA6A82B004B53D4 /* DoneViewController.swift in Sources */,
-				D698DFE61EA6961A004B53D4 /* SampleViewController.swift in Sources */,
-				D62064C11EA5257700761461 /* SimpleWizzardViewController.swift in Sources */,
-				D62064C31EA52A5000761461 /* StepPageViewController.swift in Sources */,
-				D698DFE21EA644D0004B53D4 /* StepViewController.swift in Sources */,
-				D698DFE81EA69719004B53D4 /* SampleStepViewController.swift in Sources */,
+				D6A669301EB9FAC400DD1EFB /* TextFieldMask.swift in Sources */,
+				D6A6692E1EB9FA8000DD1EFB /* StepCollectionViewController.swift in Sources */,
+				D6A6692A1EB9FA8000DD1EFB /* SimpleWizzardViewController.swift in Sources */,
+				D6A669321EB9FAC800DD1EFB /* KeyboardDismissController.swift in Sources */,
+				D6A6692B1EB9FA8000DD1EFB /* StepPageViewController.swift in Sources */,
+				D6A6692C1EB9FA8000DD1EFB /* StepViewController.swift in Sources */,
+				D6A669341EB9FACC00DD1EFB /* EmptyState.swift in Sources */,
+				D6A6692D1EB9FA8000DD1EFB /* StepTableViewController.swift in Sources */,
 				D62064AB1EA51FF000761461 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QET9249K74;
 				INFOPLIST_FILE = StepController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hb.StepController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QET9249K74;
 				INFOPLIST_FILE = StepController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hb.StepController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
