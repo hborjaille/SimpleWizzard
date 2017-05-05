@@ -11,6 +11,18 @@
 		D62064B41EA51FF000761461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B21EA51FF000761461 /* Main.storyboard */; };
 		D62064B61EA51FF000761461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62064B51EA51FF000761461 /* Assets.xcassets */; };
 		D62064B91EA51FF000761461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62064B71EA51FF000761461 /* LaunchScreen.storyboard */; };
+		D67865231EBD15FF00663AB0 /* CellDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865171EBD15FF00663AB0 /* CellDescription.swift */; };
+		D67865241EBD15FF00663AB0 /* SectionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865181EBD15FF00663AB0 /* SectionDescription.swift */; };
+		D67865251EBD15FF00663AB0 /* ExpandableTableViewHeaderFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865191EBD15FF00663AB0 /* ExpandableTableViewHeaderFirst.swift */; };
+		D67865261EBD15FF00663AB0 /* ExpandableTableViewHeaderSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651A1EBD15FF00663AB0 /* ExpandableTableViewHeaderSecond.swift */; };
+		D67865271EBD15FF00663AB0 /* ExpandableTableViewHeaderThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651B1EBD15FF00663AB0 /* ExpandableTableViewHeaderThird.swift */; };
+		D67865281EBD15FF00663AB0 /* ExpandableTableViewCellFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651C1EBD15FF00663AB0 /* ExpandableTableViewCellFirst.swift */; };
+		D67865291EBD15FF00663AB0 /* ExpandableTableViewCellThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651D1EBD15FF00663AB0 /* ExpandableTableViewCellThird.swift */; };
+		D678652A1EBD15FF00663AB0 /* ExpandableTableViewCellSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651E1EBD15FF00663AB0 /* ExpandableTableViewCellSecond.swift */; };
+		D678652B1EBD15FF00663AB0 /* ExpandableCommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D678651F1EBD15FF00663AB0 /* ExpandableCommonFunctions.swift */; };
+		D678652C1EBD15FF00663AB0 /* ExpandableItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865201EBD15FF00663AB0 /* ExpandableItemTableViewController.swift */; };
+		D678652D1EBD15FF00663AB0 /* ExpandableGeneralTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865211EBD15FF00663AB0 /* ExpandableGeneralTableViewController.swift */; };
+		D678652E1EBD15FF00663AB0 /* ExpandableInvoiceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67865221EBD15FF00663AB0 /* ExpandableInvoiceTableViewController.swift */; };
 		D6A6692A1EB9FA8000DD1EFB /* SimpleWizzardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669251EB9FA8000DD1EFB /* SimpleWizzardViewController.swift */; };
 		D6A6692B1EB9FA8000DD1EFB /* StepPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669261EB9FA8000DD1EFB /* StepPageViewController.swift */; };
 		D6A6692C1EB9FA8000DD1EFB /* StepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A669271EB9FA8000DD1EFB /* StepViewController.swift */; };
@@ -28,6 +40,18 @@
 		D62064B51EA51FF000761461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D62064B81EA51FF000761461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62064BA1EA51FF000761461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D67865171EBD15FF00663AB0 /* CellDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellDescription.swift; sourceTree = "<group>"; };
+		D67865181EBD15FF00663AB0 /* SectionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionDescription.swift; sourceTree = "<group>"; };
+		D67865191EBD15FF00663AB0 /* ExpandableTableViewHeaderFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewHeaderFirst.swift; sourceTree = "<group>"; };
+		D678651A1EBD15FF00663AB0 /* ExpandableTableViewHeaderSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewHeaderSecond.swift; sourceTree = "<group>"; };
+		D678651B1EBD15FF00663AB0 /* ExpandableTableViewHeaderThird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewHeaderThird.swift; sourceTree = "<group>"; };
+		D678651C1EBD15FF00663AB0 /* ExpandableTableViewCellFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellFirst.swift; sourceTree = "<group>"; };
+		D678651D1EBD15FF00663AB0 /* ExpandableTableViewCellThird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellThird.swift; sourceTree = "<group>"; };
+		D678651E1EBD15FF00663AB0 /* ExpandableTableViewCellSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellSecond.swift; sourceTree = "<group>"; };
+		D678651F1EBD15FF00663AB0 /* ExpandableCommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCommonFunctions.swift; sourceTree = "<group>"; };
+		D67865201EBD15FF00663AB0 /* ExpandableItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableItemTableViewController.swift; sourceTree = "<group>"; };
+		D67865211EBD15FF00663AB0 /* ExpandableGeneralTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableGeneralTableViewController.swift; sourceTree = "<group>"; };
+		D67865221EBD15FF00663AB0 /* ExpandableInvoiceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableInvoiceTableViewController.swift; sourceTree = "<group>"; };
 		D6A669251EB9FA8000DD1EFB /* SimpleWizzardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWizzardViewController.swift; sourceTree = "<group>"; };
 		D6A669261EB9FA8000DD1EFB /* StepPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPageViewController.swift; sourceTree = "<group>"; };
 		D6A669271EB9FA8000DD1EFB /* StepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +105,18 @@
 				D6A6692F1EB9FAC400DD1EFB /* TextFieldMask.swift */,
 				D6A669311EB9FAC800DD1EFB /* KeyboardDismissController.swift */,
 				D6A669331EB9FACC00DD1EFB /* EmptyState.swift */,
+				D67865171EBD15FF00663AB0 /* CellDescription.swift */,
+				D67865181EBD15FF00663AB0 /* SectionDescription.swift */,
+				D67865191EBD15FF00663AB0 /* ExpandableTableViewHeaderFirst.swift */,
+				D678651A1EBD15FF00663AB0 /* ExpandableTableViewHeaderSecond.swift */,
+				D678651B1EBD15FF00663AB0 /* ExpandableTableViewHeaderThird.swift */,
+				D678651C1EBD15FF00663AB0 /* ExpandableTableViewCellFirst.swift */,
+				D678651D1EBD15FF00663AB0 /* ExpandableTableViewCellThird.swift */,
+				D678651E1EBD15FF00663AB0 /* ExpandableTableViewCellSecond.swift */,
+				D678651F1EBD15FF00663AB0 /* ExpandableCommonFunctions.swift */,
+				D67865201EBD15FF00663AB0 /* ExpandableItemTableViewController.swift */,
+				D67865211EBD15FF00663AB0 /* ExpandableGeneralTableViewController.swift */,
+				D67865221EBD15FF00663AB0 /* ExpandableInvoiceTableViewController.swift */,
 			);
 			path = StepController;
 			sourceTree = "<group>";
@@ -158,11 +194,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67865261EBD15FF00663AB0 /* ExpandableTableViewHeaderSecond.swift in Sources */,
 				D6A669301EB9FAC400DD1EFB /* TextFieldMask.swift in Sources */,
+				D67865281EBD15FF00663AB0 /* ExpandableTableViewCellFirst.swift in Sources */,
+				D678652A1EBD15FF00663AB0 /* ExpandableTableViewCellSecond.swift in Sources */,
 				D6A6692E1EB9FA8000DD1EFB /* StepCollectionViewController.swift in Sources */,
+				D67865231EBD15FF00663AB0 /* CellDescription.swift in Sources */,
+				D678652C1EBD15FF00663AB0 /* ExpandableItemTableViewController.swift in Sources */,
+				D678652B1EBD15FF00663AB0 /* ExpandableCommonFunctions.swift in Sources */,
 				D6A6692A1EB9FA8000DD1EFB /* SimpleWizzardViewController.swift in Sources */,
 				D6A669321EB9FAC800DD1EFB /* KeyboardDismissController.swift in Sources */,
 				D6A6692B1EB9FA8000DD1EFB /* StepPageViewController.swift in Sources */,
+				D678652E1EBD15FF00663AB0 /* ExpandableInvoiceTableViewController.swift in Sources */,
+				D67865241EBD15FF00663AB0 /* SectionDescription.swift in Sources */,
+				D67865271EBD15FF00663AB0 /* ExpandableTableViewHeaderThird.swift in Sources */,
+				D67865251EBD15FF00663AB0 /* ExpandableTableViewHeaderFirst.swift in Sources */,
+				D678652D1EBD15FF00663AB0 /* ExpandableGeneralTableViewController.swift in Sources */,
+				D67865291EBD15FF00663AB0 /* ExpandableTableViewCellThird.swift in Sources */,
 				D6A6692C1EB9FA8000DD1EFB /* StepViewController.swift in Sources */,
 				D6A669341EB9FACC00DD1EFB /* EmptyState.swift in Sources */,
 				D6A6692D1EB9FA8000DD1EFB /* StepTableViewController.swift in Sources */,
