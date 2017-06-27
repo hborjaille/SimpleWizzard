@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SimpleWizzard_Example' do
+  pod 'SimpleWizzard', :path => '../'
+
+  target 'SimpleWizzard_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
