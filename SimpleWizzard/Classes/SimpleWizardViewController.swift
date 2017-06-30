@@ -52,7 +52,7 @@ open class SimpleWizardViewController: UINavigationController, StepPageViewContr
     public var cancelDelegate: CancelDelegate?
     
     // ViewCOntroller that will wrap every component together
-    var wrapController: UIViewController?
+    public var wrapController: UIViewController?
     
     // Page View Controller that will manage the transition
     var pageViewController: StepPageViewController?
