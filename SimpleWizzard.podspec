@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleWizzard'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A library that helps the user to build a Stepper for its form or anything it wants.'
 
 # This description is used to generate tags and improve search results.

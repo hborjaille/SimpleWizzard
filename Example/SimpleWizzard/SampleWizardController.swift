@@ -15,7 +15,7 @@ class SampleWizardController: SimpleWizardViewController, CancelDelegate {
         super.viewDidLoad()
         
         // Styling
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationBar.tintColor = UIColor.white
         self.navigationBar.barTintColor = UIColor(red: 51/255, green: 64/255, blue: 189/255, alpha: 1)
         self.navigationBar.barStyle = .black
