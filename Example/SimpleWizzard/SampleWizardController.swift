@@ -15,7 +15,7 @@ class SampleWizardController: SimpleWizardViewController, CancelDelegate {
         super.viewDidLoad()
         
         // Styling
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationBar.tintColor = UIColor.white
         self.navigationBar.barTintColor = UIColor(red: 51/255, green: 64/255, blue: 189/255, alpha: 1)
         self.navigationBar.barStyle = .black
@@ -52,6 +52,12 @@ class SampleWizardController: SimpleWizardViewController, CancelDelegate {
     }
     
     func cancel() {
-        self.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "Alert", message: "Exit from SampleWizzard?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            self.clearWizard()
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
