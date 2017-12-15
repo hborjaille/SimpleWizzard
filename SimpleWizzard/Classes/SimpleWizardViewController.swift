@@ -145,7 +145,7 @@ open class SimpleWizardViewController: UINavigationController, StepPageViewContr
          */
     }
     
-    func clearWizard() {
+    public func clearWizard() {
         self.nextButton = nil
         self.prevButton = nil
         self.pageDots = nil
@@ -154,12 +154,11 @@ open class SimpleWizardViewController: UINavigationController, StepPageViewContr
         self.pageViewController?.wizzard = nil
         self.popToRootViewController(animated: true)
         SimpleWizardViewController.wizardInstance = nil
+        self.cancelDelegate = nil
     }
     
-    func cancelWizzard(_ gesture: UITapGestureRecognizer) {
-        self.clearWizard()
+    @objc func cancelWizzard(_ gesture: UITapGestureRecognizer) {
         self.cancelDelegate?.cancel()
-        self.cancelDelegate = nil
     }
     
     func setChildViews(_ childViews: [UIViewController]) {
@@ -193,11 +192,11 @@ open class SimpleWizardViewController: UINavigationController, StepPageViewContr
         self.pageViewController?.goToPrev()
     }
     
-    func prevAction(_ sender: UIButton) {
+    @objc func prevAction(_ sender: UIButton) {
         self.moveDelegate?.verifyPrev()
     }
     
-    func nextAction(_ sender: UIButton) {
+    @objc func nextAction(_ sender: UIButton) {
         if self.pageViewController?.currentViewController == self.pageViewController?.orderedViewControllers?.last {
             if let val = self.moveDelegate?.verifyDone() {
                 if val {

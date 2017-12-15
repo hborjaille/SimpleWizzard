@@ -52,6 +52,12 @@ class SampleWizardController: SimpleWizardViewController, CancelDelegate {
     }
     
     func cancel() {
-        self.dismiss(animated: true, completion: nil)
+        let alert = UIAlertController(title: "Alert", message: "Exit from SampleWizzard?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            self.clearWizard()
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
